@@ -187,6 +187,12 @@ var settings = []Setting{
 		callbacks:   []setFn{EnableOrDisableDefaultStorageClass},
 	},
 	{
+		name:        "kubevirt",
+		set:         SetBool,
+		validations: []setFn{IsValidAddon},
+		callbacks:   []setFn{EnableOrDisableAddon},
+	},
+	{
 		name: "hyperv-virtual-switch",
 		set:  SetString,
 	},
